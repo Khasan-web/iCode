@@ -1,0 +1,22 @@
+.month{
+    width: 100%;
+    height: 10px;
+}
+.first{
+    background: #1B6BBB;
+}
+.second{
+    background: #00006D;
+    transform: translate(-50%, 10px);
+}
+.third{
+    background: #7000BE;
+    transform: translate(-50%, 0px);
+}
+.last{
+    background: #C6015D;
+    transform: translate(0, -10px);
+}
+#list h5, p{
+    display: inline;
+}

@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face{
+    font-family: 'SF UI Text';
+    font-weight: 300;
+    font-style: normal;
+    src: url('assets/fonts/Sf/SFUIText-Light.ttf')
+}
+@font-face{
+    font-family: 'SF UI Text';
+    font-weight: 100;
+    font-style: normal;
+    src: url('assets/fonts/Sf/SFUIDisplay-Ultralight.ttf')
+}
+@font-face{
+    font-family: 'SF UI Text';
+    font-weight: 200;
+    font-style: normal;
+    src: url('assets/fonts/Sf/SFUIDisplay-Thin.ttf')
+}
+
+html{
+    background: #000;
+}
+
+body{
+    font-family: 'SF UI Text'!important;
+    font-weight: 300!important;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'SF UI Text'!important;
+    color: #fff;
+}
+p{
+    font-family: 'SF UI Text'!important;
+    font-weight: 200!important;
+    opacity: 0.8;
+    line-height: 1.6em;
+    color: #fff;
+}
+button{
+    font-family: 'SF UI Text'!important;
+    font-weight: 300!important;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.rounded{
+    border-radius: 5rem!important;
+}
+.card{
+    background: none;
+}
+.card h5{
+    font-weight: 300;
+}
+.card-img-top img{
+    width: 200px;
+    height: 100%;
+}
+.card-img-top{
+    position: relative;
+}
+th{
+    color: #fff;
+    padding-top: 0!important;
+}
+td{
+    color: #fff;
+    border-top: 0!important;
+}
+thead th{
+    border-top: 0px !important;
+    border-bottom: 1px solid #fff!important;
+}
+
+@media(max-width: 998px){
+    body{
+        overflow: visible;
+    }
+}
+
+
+input[type = text],
+input[type = email],
+input[type = phone], textarea{
+    background: none!important;
+    color: #fff!important;
+}
+
+select{
+    background: none!important;
+}

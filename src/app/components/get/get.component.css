@@ -1,0 +1,6 @@
+.blank{
+    width: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: calc(50% - 250px);
+}

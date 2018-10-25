@@ -1,0 +1,77 @@
+<section id="front-end">
+
+  <div class="row ml-5">
+    <div class="col-lg-6 col-md-12 px-3">
+      <h2>Web Programming - Front End ( $400.00 )</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore soluta tenetur est dicta velit? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptas labore soluta laboriosam cum facere ipsam,
+        harum aliquid voluptates unde.</p>
+      <h5 class="mb-5 mt-3">What this course includes:</h5>
+    </div>
+    <div class="col-lg-6 pr-5 " id="list">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Time to study</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML & CSS</td>
+            <td>1st month</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>CSS deeply & BOOTSTRAP</td>
+            <td>2nd month</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>JAVA SCRIPT & JQUERY</td>
+            <td>3rd month</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td>ANGULAR 6</td>
+            <td>4th month</td>
+            <td>$100.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-5">
+
+      <div class="col-lg-4 col-md-6" *ngFor="let course of courses">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 p-0">
+                <img class="w-100" src="../../../../assets/imgs/course/{{course.img}}" alt="">
+              </div>
+              <div class="col-8 p-0">
+                <div class="card-title">
+                  <h5>{{course.name}}</h5>
+                </div>
+                <div class="card-text">
+                  <p>{{course.info}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<div class="text-center" style="margin-top: 25px;" (answer)="getFrontEnd($event)">
+    <a routerLink="/registration"><button class="btn btn-outline-light rounded">Send Enquiry</button></a>
+</div>
+
+
+</section>

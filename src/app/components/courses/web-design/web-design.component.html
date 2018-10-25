@@ -1,0 +1,62 @@
+<section id="web-design">
+  <div class="row ml-5">
+    <div class="col-lg-6 col-md-12 px-3">
+      <h2>Web Design ( {{totalOwed | currency}} )</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore soluta tenetur est dicta velit? Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptas labore soluta laboriosam cum facere ipsam,
+        harum aliquid voluptates unde.</p>
+      <h5 class="mb-5 mt-3">What this course includes:</h5>
+    </div>
+    <div class="col-lg-6 pr-5 " id="list">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Time to study</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td>{{course.name}}</td>
+            <td>{{course.time}} week</td>
+            <td>{{course.cost | currency}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row mt-5">
+
+      <div class="col-lg-4 col-md-6" *ngFor="let course of courses">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 p-0">
+                <img class="w-100" src="../../../../assets/imgs/course/{{course.img}}" alt="">
+              </div>
+              <div class="col-8 p-0">
+                <div class="card-title">
+                  <h5>{{course.name}}</h5>
+                </div>
+                <div class="card-text">
+                  <p>{{course.info}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="text-center" style="margin-top: 25px;">
+      <a routerLink="/registration"><button class="btn btn-outline-light rounded">Send Enquiry</button></a>
+  </div>
+</section>
