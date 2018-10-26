@@ -27,6 +27,7 @@ body{
     font-family: 'SF UI Text'!important;
     font-weight: 300!important;
     overflow: hidden;
+    max-height: 100vh!important;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -80,6 +81,7 @@ thead th{
 @media(max-width: 998px){
     body{
         overflow: visible;
+        margin: 0!important;
     }
 }
 
@@ -93,4 +95,8 @@ input[type = phone], textarea{
 
 select{
     background: none!important;
+}
+
+.navbar-dark .navbar-toggler{
+    border: none!important;
 }

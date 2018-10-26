@@ -4,3 +4,16 @@
     left: calc(50% - 250px);
     top: calc(50% - 250px);
 }
+
+@media(max-width: 998px){
+   .blank{
+    position: relative;
+    width: 100%;
+    padding: 0 25px;
+    left: 0;
+    margin-bottom: 20px;
+   }
+   input{
+       margin-bottom: 15px;
+   }
+}

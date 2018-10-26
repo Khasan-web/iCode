@@ -65,9 +65,6 @@ export class FrontEndComponent implements OnInit {
    ngOnInit() {
   }
 
-  getFrontEnd(){
-    this.answer = 'frontEnd'
-  }
 
 
 
