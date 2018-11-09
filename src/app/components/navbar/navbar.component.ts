@@ -12,15 +12,13 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-    
+    showNavMobile: boolean;
 
 
     ngOnInit() {
 
 
         $(document).ready(function () {
-
-
 
             // home
 
@@ -90,13 +88,14 @@ export class NavbarComponent implements OnInit {
             });
 
 
-
-
-
         });
 
-
-
     }
+
+
+    closeNav(){
+        this.showNavMobile = !this.showNavMobile;
+    }
+
 
 }

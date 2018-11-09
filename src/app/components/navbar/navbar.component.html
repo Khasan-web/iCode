@@ -1,28 +1,28 @@
-<body class="sticky-footer sidenav-toggled fixed-nav" id="page-top">
+<body class="sticky-footer fixed-nav" [ngClass]="{'sidenav-toggled' : !showNavMobile}" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: #000;">
     <a class="navbar-brand" href="index.html"><img src="../../../assets/imgs/logo.png" alt="" width="100"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button (click)="showNavMobile = !showNavMobile" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show' : showNavMobile}">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <div id="slideBorder"></div>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Home" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
         
           <a class="nav-link" id="home" [routerLink]="['/']">
             <i class="fa fa-fw fa-home" ></i>
             <span class="nav-link-text">Home</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="About us" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="About us" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" id="about" [routerLink]="['/about']">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">About iCode</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cources" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Cources" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" id="courses" [routerLink]="['/courses']">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Courses</span>
@@ -42,25 +42,25 @@
             </li>
           </ul>
         </li> -->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Getting a course" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Getting a course" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" id="getCourse" [routerLink]="['/registration']">
             <i class="fa fa-fw fa-handshake-o"></i>
             <span class="nav-link-text">Getting a Course</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Our team" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Our team" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" id="team" [routerLink]="['/team']">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Our Team</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Blog" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Blog" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
             <a class="nav-link" id="blog" [routerLink]="['/blog']">
               <i class="fa fa-fw fa-comments"></i>
               <span class="nav-link-text">Blog</span>
             </a>
           </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contacts" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <li (click)="closeNav()" class="nav-item" data-toggle="tooltip" data-placement="right" title="Contacts" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" id="contact" [routerLink]="['/contact']">
             <i class="fa fa-fw fa-phone"></i>
             <span class="nav-link-text">Contacts</span>
@@ -68,7 +68,7 @@
         </li>
 
       </ul>
-      <ul class="navbar-nav sidenav-toggler">
+      <ul class="navbar-nav sidenav-toggler" *ngIf="!showNavMobile">
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
             <i class="fa fa-fw fa-angle-left"></i>
